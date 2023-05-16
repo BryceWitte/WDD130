@@ -10,6 +10,7 @@ footer p {
 h1 {
     margin: 50px 50px;
     border: 4px solid steelblue;
+    text-align: center;
 }
 
 nav {
