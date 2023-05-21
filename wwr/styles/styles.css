@@ -6,9 +6,10 @@
 }
 
 nav a {
-    text-align: center;
-    color: black;
     text-decoration: none;
+    color: #fcfbfb;
+    text-align: center;
+    padding: 35px;
 }
 #hero-msg h1 {
     text-align: center;
@@ -44,6 +45,7 @@ nav a:hover {
 
 .home-title {
     color: blue;
+    margin-top: 10px;
 }
 h4 {
     color:black;
@@ -52,11 +54,21 @@ h4 {
     background-color: black;
     color: white;
     text-decoration: none;
+    margin-top: 50px;
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 5px;
 }
 .join {
     background-color: black;
     color: white;
     text-decoration: none;
+    margin-top: 50px;
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 18px;
+    padding: 15px 30px;
+    border-radius: 5px;
 }
 .book:hover {
     background-color: yellow;
@@ -79,6 +91,8 @@ h4 {
 footer {
     background-color: blue;
     color: whitesmoke;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer a {
     color: black;
@@ -95,6 +109,7 @@ footer a:hover {
 }
 .icon {
     width: 80px;
+    padding-top: 10px;
 }
 #hero-img {
     width: 100%;
@@ -103,3 +118,58 @@ footer a:hover {
 footer p:hover {
     text-decoration: underline;
 }    
+
+
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 2em;
+}
+
+.msg p {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: .8em;
+    padding-bottom: 15px;
+}
+
+.msg {
+    background-color: #6f7364;
+    line-height: 1.5em;
+    padding: 35px;
+}
+
+body {
+    background-color: #fcfbfb;
+    font-family: Raleway, Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+}
+h2 {
+    margin: 0;
+}
+
+#logo_link {
+    padding-top: 5px;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+
+main section img {
+    box-sizing: border-box;
+}
+
+.rivers-card {
+    margin: 200px 0;
+}
+.camping-card {
+    margin: 200px 0;
+}
+.rapids-card {
+    margin: 200px 0;
+}
