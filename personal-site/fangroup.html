@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        #feedback {
+            background-color: antiquewhite;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            padding: .5em;
+            display: none;      
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+
+        form {
+            margin: 0 auto;
+            width: 400px;
+            padding: 1em;
+            border: 1px solid #ccc;
+            border-radius: 1em;
+        }
+        
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        form li + li {
+            margin-top: 1em;
+        }
+        
+        label {
+            display: list-item;
+            width: 90px;
+            text-align: left;
+        }
+        
+        input,
+        textarea {
+            font: 1em sans-serif;
+        
+            width: 300px;
+            box-sizing: border-box;
+        
+            border: 1px solid #999;
+        }
+        
+        input:focus,
+        textarea:focus {
+            border-color: #000;
+        }
+        
+        textarea {
+            vertical-align: top;
+        
+            height: 5em;
+        }
+        
+        .button {
+            padding-left: 90px;
+        }
+        
+        button {
+            margin-left: 0.5em;
+        }
+
+        .container1 {
+            display: grid;
+            grid-template-columns: 2fr 4fr 2fr;
+            grid-template-rows: 2fr 2fr;
+        }
+
+        .box {
+            grid-column: 2;
+            grid-row: 2;
+            place-items: center;
+        }
+
+  
+    </style>
+    <title>Fan-Group</title>
+</head>
+<body>
+    <header>
+        <a href="index.html" id="logo_link">
+            <img src="images/Avenger Fanpage-logos_white.png" alt="FA Logo" class="logo">
+        </a>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="merch.html">Merch</a>
+            <a href="fangroup.html">Fangroup</a>
+        </nav>
+    </header>
+    <main>
+        <div class="facts">
+            <h1>Fun Facts</h1>
+            <ul>
+                <li>Steve Grant Rogers was born to Joseph and Sarah Rogers, believe it or not, July 4, 1922. Both of his parents fought in the military and died while serving their country. This left Rogers to learn how to fend for himself with his best friend James "Bucky" Barnes. When the United States of America entered World War II in 1939, he was one of the first in line to enlist. Due to his health conditions he was denied and forced to watch those around join the fight. He is noticed sometime after by a German scientist who notices his good heart. Rogers volunteers to be part of a super soldier program. This would give an individual enhanced speed, strength, reactions, and more. Essentially making a perfect soldier. Rogers went under a procedure that gave him all the traits of a super soldier and the body of a greek god. Following this he helped the US military battle the Nazis across Europe. One mission ended up costing Rogers his best friend, Bucky, and was thrown into the Atlantic Ocean.</li>
+                <li>Steve Rogers aka. Captain America, is always looking out for the little guy and always fights for what he believes in. Whether its for his loved ones or for the freedom of those around him, he'll be "with them till the end of the line". In fact, Captain America is always willing to risk his own life to defend the ones of those around him. Even if that meant jumping on a grenade, crashing a plane, or giving up the love of his life. His fighting style is a combination of multiple different types of martial arts and he uses one of the most unique weapons in the Marvel universe. His shield brings hope to those living in fear and inspired the Strategic Homeland Intervention Enforcement Logistics Division (Shield). He's all the good parts of the American dream put into one individual. Freedom and liberty for all of mankind.</li>
+                <li>In 2008, the movie <i>Ironman</i> with Robert Downey Jr. as Tony Stark was released. This movie began what is known as the Marvel Cinematic Universe. These were movies made wih characters from the Marvel comics. Actors include Chris Evans (Captain America), Scarlett Johansson (Black Widow), Chris Hemsworth (Thor), and Brie Larson (Captain Marvel). These actors allowed fans to see some of their favorite characters come to life on screen. In fact, Avengers Endgame was the highest grossing film of all time. These movies allowed for all types of fans to see their favorite heroes interact with the other Avengers.</li>
+            </ul>
+        </div>
+        <div class="box">
+            <h1>Join Our Fan-Group</h1>
+            <div class="container1">
+                <div id="feedback"></div>
+                <form action="/my-handling-form-page" method="post">
+                    <ul>
+                    <li>
+                        <label for="name">First Name:</label>
+                        <input type="text" id="name" name="user_name" />
+                    </li>
+                    <li>
+                        <label for="mail">Email:</label>
+                        <input type="email" id="mail" name="user_email" />
+                    </li>
+                    <li>
+                        <label for="msg">Short Message:</label>
+                        <textarea id="msg" name="user_message"></textarea>
+                    </li>
+                    <li class="button">
+                        <button type="submit">Join Fangroup</button>
+                    </li>
+                    </ul>
+                </form>
+                <script>
+                    const feedbackElement = document.getElementById('feedback');
+                    const formElement = document.forms[0];
+                    formElement.addEventListener('submit', function(e) {
+                        e.preventDefault();
+                        feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for your message. We will get back with you as soon as possible!';
+                        feedbackElement.style.display = "block";
+                        document.body.classList.toggle('moveDown');
+                    });
+                </script>  
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p style="color: white;">Avenger's Fanpage &copy; 2023 - Bryce Witte</p>
+        <p><a href="site-plan.html">Site Plan</a></p>
+        <p><a href="contactus.html">Contact Us</a></p>
+        <div class="social">
+            <a href="https://facebook.com" target="_blank">
+                <img src="images/facebook.png" alt="fb icon" class="icon">
+            </a>
+            <a href="https://twitter.com" target="_blank">
+                <img src="images/twitter.png" alt="twitter icon" class="icon">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="images/instagram.png" alt="insta icon" class="icon">
+            </a>
+        </div>
+    </footer>
+
+ 
+</body>
+</html>
